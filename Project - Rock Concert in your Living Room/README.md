@@ -75,21 +75,27 @@ https://www.hackster.io/techmirtz/using-common-cathode-and-common-anode-rgb-led-
   
 1. Test light intensity: solid color  
 Eg. 0, 0, 255 might make green; but what if you instead send 0, 0, 125? Does this make a dull green?  
+  --> yes!! you can get different brightness
   
 2. Test color scale  
 Make a simple for-loop from 0 - 255 and cycle up and down. What happens when you send that signal to the LED?  
+  --> yes!!
   
 3. Test possible colors  
 a) Make a matrix in Excel to start off with. What are all of the possible theoretical colors?  
 b) test each of the theoretical colors, hard-coded  
+  --> you can get any color or combination of colors using RGB codes
   
 
 ### OUT 2. Controlling multiple LEDs with one signal
-Based on number of pins, there could be up to 4 x output circuits.  
-a) What is the circuit for wiring muliple LEDs? --> in parallel  
-b) Do you still use 220 Ohm resistors? (V=IR omg I have forgotten this stuff!!)  
-Make a test circuit with 3x sets of outputs, and 2x LEDs in each set.  
+a) connect mutliple RGB LED's in parallel -->FAIL!
+This is really complex
+ * R has a different max voltage to G and B.
+ * Each diode draws 20mA current, that's 60mA per lamp. The max current drawn from each Arduino pin is 40mA. Solution is to use PNP transistors and current-limiting resistors (are they a special kind of resistor???) -- I can't find an example circuit
   
+PLAN B: forget the RGB LEDs, set up multiple banks of plan-color LEDs
+  
+
 
 ### IN 1. Microphone input
 #### Plan A: FAIL  

@@ -10,11 +10,14 @@ Isolate just the microphone as input
 //#define RED       (255, 0, 0);     // Red
 //#define GREEN     (0, 255, 0);     // Green
 //#define BLUE      (0, 0, 255);     // Blue
+
 //#define RASPBERRY (255, 255, 125); // Raspberry
+
 //#define CYAN      (0, 255, 255);   // Cyan
 //#define MAGENTA   (255, 0, 255);   // Magenta
 //#define YELLOW    (255, 255, 0);   // Yellow
 //#define WHITE     (255, 255, 255); // White
+
 
 void setup() {
   pinMode(GREEN_PIN, OUTPUT);
@@ -25,24 +28,22 @@ void setup() {
 }
 
 void loop() {
-  RGB_color(255, 0, 0); // Red
-  delay(1000);
-  RGB_color(0, 255, 0); // Green
-  delay(1000);
-  RGB_color(0, 0, 255); // Blue
-  delay(1000);
-  RGB_color(255, 255, 125); // Raspberry
-  delay(1000);
-  RGB_color(0, 255, 255); // Cyan
-  delay(1000);
-  RGB_color(255, 0, 255); // Magenta
-  delay(1000);
-  RGB_color(255, 255, 0); // Yellow
-  delay(1000);
-  RGB_color(255, 255, 255); // White
-  delay(1000);    
+
+for (int i = 0; i <= 255; i++) {
+for (int j = 0; j <= 255; j++) {
+    RGB_color(j, 0, i);
+    delay(10);
+}
 }
 
+for (int i = 0; i >= 0; i--) {
+for (int j = 0; j >= 0; j--) {
+    RGB_color(j, 0, i);
+    delay(10);
+}
+}
+
+}
 
 void RGB_color(int red_value, int green_value, int blue_value)
  {
