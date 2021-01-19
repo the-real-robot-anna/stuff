@@ -65,8 +65,33 @@ Filters in electronic circuits can be passive or active. I'm still figuring this
   
 
 ## Prototype
-Each module will first be prototyped separately, for contingency. Then if I can't get the parts on time or if I can't get them to work, I can make do with the individual modules that are working.  
+I've decided on 7 different modules which require testing and prototyping separately, for contingency. Then if I can't get the parts on time or if I can't get them to work, I can make do with the individual modules that are working.  
+![Modules](assets/modules.png)  
   
+  
+### IN 1. Microphone input
+#### Plan A: FAIL  
+I purchased KY-037 microphone sensor modules from AZ-Delivery, but their product description is misleading!!! :( It said it's an audio microphone but it's really a sound-detector with a threshold. Eg. it sends a digital signal if it hears a clap. The output analog signal is too weak to use without ampliication. A lot of forum posts about this.  
+#### Plan B:  
+Test 2: MAX-4466 sensors which (apparently) contain a preamp and these should output an analog audio signal.  
+
+#### Plan C: ()  
+If the MAX-4466 doesn't work, then order individual components and follow Bitluni's tutorial:  
+https://www.youtube.com/watch?v=SToBPCajwc0&ab_channel=bitluni  
+  
+
+### IN 2. Passive "beat detector" circuit
+xxx
+  
+  
+### IN 3. Passive high-pass audio filter
+xxx
+  
+  
+### IN 4. Passive low-pass audio filter
+xxx
+  
+
 
 ### OUT 1. Single multi-color LED output
 Tutorials:  
@@ -97,31 +122,8 @@ PLAN B: forget the RGB LEDs, set up multiple banks of plan-color LEDs
   
 
 
-### IN 1. Microphone input
-#### Plan A: FAIL  
-I purchased KY-037 microphone sensor modules from AZ-Delivery, but their product description is misleading!!! :( It said it's an audio microphone but it's really a sound-detector with a threshold. Eg. it sends a digital signal if it hears a clap. The output analog signal is too weak to use without ampliication.  
-#### Plan B: (WAIT FOR AMAZON)  
-I have ordered MAX-4466 sensors which (apparently) contain a preamp and these should output an analog audio signal.  
-#### Plan C: ()  
-If the MAX-4466 doesn't work, then order individual components and follow Bitluni's tutorial:  
-https://www.youtube.com/watch?v=SToBPCajwc0&ab_channel=bitluni  
-  
 
-### IN 2. Passive "beat detector" circuit
-xxx
-  
-  
-### IN 3. Passive high-pass audio filter
-xxx
-  
-  
-### IN 4. Passive low-pass audio filter
-xxx
-  
-  
-### IN 5. Passive band-pass audio filter
-xxx
-  
+
 
 ## Final Build
 xxx
