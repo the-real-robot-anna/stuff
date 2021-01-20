@@ -75,6 +75,8 @@ I purchased KY-037 microphone sensor modules from AZ-Delivery, but their product
 #### Plan B:  
 Test 2: MAX-4466 sensors which (apparently) contain a preamp and these should output an analog audio signal.  
 ![Circuit mic](assets/module1_mic.png)  
+![Circuit mic](research/research_IN_mic3/waveform.png)  
+
 #### Plan C: ()  
 If the MAX-4466 doesn't work, then order individual components and follow Bitluni's tutorial:  
 https://www.youtube.com/watch?v=SToBPCajwc0&ab_channel=bitluni  
@@ -105,7 +107,7 @@ Make a simple for-loop from 0 - 255 and cycle up and down. What happens when you
   
 #### 3. Test possible colors  
   --> you can get any color or combination of colors using RGB codes
-![Circuit led](assets/RGB_LED_test.mp4)  
+![Circuit led](research/research_OUT_one_led/one_LED.png)  
   
 
 ### OUT 2. Controlling multiple LEDs with one signal
