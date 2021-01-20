@@ -74,7 +74,7 @@ I've decided on 7 different modules which require testing and prototyping separa
 I purchased KY-037 microphone sensor modules from AZ-Delivery, but their product description is misleading!!! :( It said it's an audio microphone but it's really a sound-detector with a threshold. Eg. it sends a digital signal if it hears a clap. The output analog signal is too weak to use without ampliication. A lot of forum posts about this.  
 #### Plan B:  
 Test 2: MAX-4466 sensors which (apparently) contain a preamp and these should output an analog audio signal.  
-
+![Circuit mic](assets/module1_mic.png)  
 #### Plan C: ()  
 If the MAX-4466 doesn't work, then order individual components and follow Bitluni's tutorial:  
 https://www.youtube.com/watch?v=SToBPCajwc0&ab_channel=bitluni  
@@ -94,22 +94,18 @@ xxx
 
 
 ### OUT 1. Single multi-color LED output
-Tutorials:  
-https://create.arduino.cc/projecthub/muhammad-aqib/arduino-rgb-led-tutorial-fc003e  
-https://www.hackster.io/techmirtz/using-common-cathode-and-common-anode-rgb-led-with-arduino-7f3aa9  
   
-1. Test light intensity: solid color  
+#### 1. Test light intensity: solid color  
 Eg. 0, 0, 255 might make green; but what if you instead send 0, 0, 125? Does this make a dull green?  
   --> yes!! you can get different brightness
   
-2. Test color scale  
+#### 2. Test color scale  
 Make a simple for-loop from 0 - 255 and cycle up and down. What happens when you send that signal to the LED?  
   --> yes!!
   
-3. Test possible colors  
-a) Make a matrix in Excel to start off with. What are all of the possible theoretical colors?  
-b) test each of the theoretical colors, hard-coded  
+#### 3. Test possible colors  
   --> you can get any color or combination of colors using RGB codes
+![Circuit led](assets/RGB_LED_test.mp4)  
   
 
 ### OUT 2. Controlling multiple LEDs with one signal
