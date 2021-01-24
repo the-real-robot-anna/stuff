@@ -69,39 +69,29 @@ I've decided on 7 different modules which require testing and prototyping separa
 ![Modules](assets/modules.png)  
   
   
-### IN 1. Microphone input
-#### Plan A: FAIL  
-I purchased KY-037 microphone sensor modules from AZ-Delivery, but their product description is misleading!!! :( It said it's an audio microphone but it's really a sound-detector with a threshold. Eg. it sends a digital signal if it hears a clap. The output analog signal is too weak to use without ampliication. A lot of forum posts about this.  
-#### Plan B:  
-Test 2: MAX-4466 sensors which (apparently) contain a preamp and these should output an analog audio signal.  
+### Module 1. Microphone input
+
+#### Test 1: FAIL  
+KY-037 microphone sensor module: wrong type of sensor. This is a sound-detector with a threshold. Eg. it sends a digital signal if it hears a clap. The output analog signal is too weak to use as an audio sampler.  
+#### Test 2: FAIL  
+MAX-4466 mic + onboard amp should have worked, but it didn't.
 ![Circuit mic](assets/module1_mic.png)  
 ![Circuit mic](research/research_IN_mic3/waveform.png)  
 
-#### Plan C: ()  
-If the MAX-4466 doesn't work, then order individual components and follow Bitluni's tutorial:  
+I have tested 12 different sets of code, 3 different processors (2 x Arduino and 1x ELEGOO), many many different wirings, many different LEDs, even adding capacitors to reduce noise on the power circuit. Now I've come to the conclusion that the MAXX-4466 is dead. And in fact: the supplier has several bad reviews, where buyers complain about defective units.  
+
+I don't have time to order a different mic before the end of this lesson, so I'll complete the project in my own time next month.  
+Reminder to self: here's a good idea for an audio input circuit that actually does work.  
 https://www.youtube.com/watch?v=SToBPCajwc0&ab_channel=bitluni  
   
 
-### IN 2. Passive "beat detector" circuit
-xxx
+### Module 2. Single multi-color LED output
   
-  
-### IN 3. Passive high-pass audio filter
-xxx
-  
-  
-### IN 4. Passive low-pass audio filter
-xxx
-  
-
-
-### OUT 1. Single multi-color LED output
-  
-#### 1. Test light intensity: solid color  
+#### Test light intensity: solid color: PASS  
 Eg. 0, 0, 255 might make green; but what if you instead send 0, 0, 125? Does this make a dull green?  
-  --> yes!! you can get different brightness
+  --> yes!!  
   
-#### 2. Test color scale  
+#### 2. Test color scale: PASS  
 Make a simple for-loop from 0 - 255 and cycle up and down. What happens when you send that signal to the LED?  
   --> yes!!
   
@@ -114,14 +104,7 @@ Make a simple for-loop from 0 - 255 and cycle up and down. What happens when you
 a) connect mutliple RGB LED's in parallel -->FAIL!
 This is really complex
  * R has a different max voltage to G and B.
- * Each diode draws 20mA current, that's 60mA per lamp. The max current drawn from each Arduino pin is 40mA. Solution is to use PNP transistors and current-limiting resistors (are they a special kind of resistor???) -- I can't find an example circuit
+ * Each diode draws 20mA current, that's 60mA per lamp. The max current drawn from each Arduino pin is 40mA. Solution is to use PNP transistors and current-limiting resistors  
+  I have ordered transistors but they won't arrive in time. Yet again reason why the project will get completed next month.
   
-PLAN B: forget the RGB LEDs, set up multiple banks of plan-color LEDs
-  
 
-
-
-
-
-## Final Build
-xxx
